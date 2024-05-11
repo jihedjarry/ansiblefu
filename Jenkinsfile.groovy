@@ -37,6 +37,11 @@ node {
         print buildNum
         print branchName			
 	
+	stage('Env - clone'){
+                git 'https://github.com/jihedjarry/ansiblefu.git'
+        }
+
+	
 	/* déterminer l'extension */
     	if (branchName == "dev" ){
       		extension = "-SNAPSHOT"
